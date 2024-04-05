@@ -321,6 +321,8 @@ MODBUS_API void modbus_set_float_dcba(float f, uint16_t *dest);
 MODBUS_API void modbus_set_float_badc(float f, uint16_t *dest);
 MODBUS_API void modbus_set_float_cdab(float f, uint16_t *dest);
 
+MODBUS_API int send_msg(modbus_t *ctx, uint8_t *msg, int msg_length);
+
 #include "modbus-rtu.h"
 #include "modbus-tcp.h"
 
