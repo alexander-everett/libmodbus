@@ -1,3 +1,7 @@
+# This is a fork of the original libmodbus library
+
+I have forked the original libmodbus library to add support for sending raw Modbus frames. The limitation of the original library is that you could only call modbus_reply(), which is only useful if you are a Modbus slave. If you are a Modbus master, you need to be able to send raw Modbus frames for the reply. In this case it's useful for if you need to implement a Modbus gateway or a Modbus proxy.
+
 # A groovy modbus library
 
 ![Build Status](https://github.com/stephane/libmodbus/actions/workflows/build.yml/badge.svg)
