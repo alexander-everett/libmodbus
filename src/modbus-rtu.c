@@ -852,7 +852,7 @@ static int _modbus_rtu_connect(modbus_t *ctx)
     */
     /* Unused because we use open with the NDELAY option */
     tios.c_cc[VMIN] = 0;
-    tios.c_cc[VTIME] = 0;
+    tios.c_cc[VTIME] = 10;
 
     if (tcsetattr(ctx->s, TCSANOW, &tios) < 0) {
         close(ctx->s);
